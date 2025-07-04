@@ -12,14 +12,32 @@ public class ReverseArray {
 		
 		for (int i =arr.length-1; i >=0 ; i--) 
 		{
-			System.out.print(arr[i]);
 			temp[arr.length-1-i]=arr[i];
 			
 		}
-		System.out.println();
+		
 		
 		System.out.println(Arrays.toString(temp));
-
+		System.out.println();
+		
+		/*
+				next approch using only one array 
+		*/		
+		
+		
+		int start=0, end=arr.length-1;
+		
+		while (start<end) {
+			
+			int temp1=arr[start];
+			arr[start]=arr[end];
+			arr[end]=temp1;
+			start++;
+			end--;
+		}
+		
+		System.out.println(Arrays.toString(arr));
+		
 	}
 
 }
